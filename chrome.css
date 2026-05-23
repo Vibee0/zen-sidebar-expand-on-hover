@@ -116,7 +116,7 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
         /*Elements with smooth transitions that are animated*/
         #navigator-toolbox, #PersonalToolbar, #tabbrowser-tabbox, tab:is([zen-essential]),
         #zen-workspaces-button, #zen-workspaces-button .subviewbutton, #zen-media-focus-button::after,
-        .tab-label-container, #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button),
+        .tab-label-container, #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button, #downloads-button),
         zen-folder .tab-group-container, #tabbrowser-tabpanels{
           transition: clip-path var(--transition-duration) ease-in-out var(--transition-delay-smooth),
           transform var(--transition-duration) ease-in-out var(--transition-delay-smooth),
@@ -127,7 +127,7 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
       }
 
       @media (-moz-pref("mod.autoexpand.performance_mode", "balanced")) {
-        #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button), #zen-media-controls-toolbar, #zen-appcontent-wrapper,
+        #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button, #downloads-button), #zen-media-controls-toolbar, #zen-appcontent-wrapper,
         vbox.zen-workspace-tabs-section.zen-workspace-pinned-tabs-section,
         #nav-bar, #tabs-newtab-button .toolbarbutton-text, tab:not([zen-essential]):not([pinned])[selected="true"] .tab-background,
         .tab-audio-button, #zen-media-controls-hbox > *:not(#zen-media-focus-button), #zen-media-main-vbox > *:not(#zen-media-controls-hbox),
@@ -155,7 +155,7 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
       }
 
       @media (-moz-pref("mod.autoexpand.performance_mode", "potato")) {
-        #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button), #zen-media-controls-toolbar, #zen-appcontent-wrapper,
+        #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button, #downloads-button), #zen-media-controls-toolbar, #zen-appcontent-wrapper,
         vbox.zen-workspace-tabs-section.zen-workspace-pinned-tabs-section,
         #nav-bar, #tabs-newtab-button .toolbarbutton-text, tab:not([zen-essential]):not([pinned])[selected="true"] .tab-background,
         .tab-audio-button, #zen-media-controls-hbox > *:not(#zen-media-focus-button), #zen-media-main-vbox > *:not(#zen-media-controls-hbox),
@@ -682,7 +682,7 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
       }
 
       #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button){
-      opacity: 0% !important;
+      opacity: 100% !important;
       }
 
       /*removes gap in the foot buttons*/
@@ -1112,8 +1112,4 @@ use same implementation: https://github.com/StormAnon/zen-sidebar-expand-on-hove
             }
         }
     }
-}
-
-  #zen-sidebar-foot-buttons #downloads-button {
-  opacity: 100% !important;
 }
