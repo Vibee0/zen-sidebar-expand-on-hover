@@ -1113,3 +1113,7 @@ use same implementation: https://github.com/StormAnon/zen-sidebar-expand-on-hove
         }
     }
 }
+
+  #zen-sidebar-foot-buttons #downloads-button {
+  opacity: 100% !important;
+}
